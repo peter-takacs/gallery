@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Gallery from "@/app/Gallery.react";
+import Gallery from "@/components/Gallery.react";
 
 import SprKalmanMichelle06PropDesign from "@/public/2019_Spr_Kalman_Michelle_06_PropDesign.jpg";
 import SprKalmanMichelle07PropStoryMoment from "@/public/2019_Spr_Kalman_Michelle_07_PropStoryMoment.jpg";

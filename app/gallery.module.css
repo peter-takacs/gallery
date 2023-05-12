@@ -1,0 +1,21 @@
+.imageGrid {
+  grid-gap: 1em;
+  align-items: center;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
+  justify-items: center;
+}
+.imageGrid div {
+  min-height: 0;
+  min-width: 0;
+}
+.image {
+  margin: auto;
+  max-height: 90%;
+  max-width: 90%;
+}
+.imageGrid img {
+  max-height: 300px;
+  max-width: 100%;
+}

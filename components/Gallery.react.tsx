@@ -21,7 +21,7 @@ export default function Gallery({ title, images }: Props) {
               key={src}
               placeholder="blur"
               src={src}
-              style={{ "object-fit": "contain" }}
+              style={{ objectFit: "contain" }}
             />
           </div>
         ))}

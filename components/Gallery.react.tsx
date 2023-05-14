@@ -1,5 +1,5 @@
-import Image from "next/image";
-import styles from "./gallery.module.css";
+import styles from "@/components/gallery.module.css";
+import GalleryImage from "@/components/GalleryImage.react";
 
 export type Image = {
   src: string;
@@ -16,14 +16,7 @@ export default function Gallery({ title, images }: Props) {
       <h2>{title}</h2>
       <div className={styles.imageGrid}>
         {images.map(({ src }) => (
-          <div className={styles.image}>
-            <Image
-              key={src}
-              placeholder="blur"
-              src={src}
-              style={{ objectFit: "contain" }}
-            />
-          </div>
+          <GalleryImage src={src} key={src} />
         ))}
       </div>
     </div>

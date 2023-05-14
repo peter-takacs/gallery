@@ -14,7 +14,7 @@ export default function LightboxContextProvider({ children }: Props) {
   const value = useMemo(() => ({ show, hide }), [show, hide]);
   return (
     <LightboxContext.Provider value={value}>
-      {children}
+      <div>{children}</div>
       {content != null ? content : null}
     </LightboxContext.Provider>
   );

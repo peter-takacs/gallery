@@ -31,8 +31,7 @@ export default function RootLayout({
             ))}
           </ul>
         </section>
-
-        {children}
+        <section className="content">{children}</section>
       </body>
     </html>
   );

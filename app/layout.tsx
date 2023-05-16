@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   const routes = [
     { href: "vizdev", name: "Vizdev" },
-    { href: "illustration", name: "Illustration" },
+    //TODO { href: "illustration", name: "Illustration" },
     { href: "about", name: "About" },
   ];
   return (

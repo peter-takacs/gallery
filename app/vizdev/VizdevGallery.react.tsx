@@ -21,22 +21,26 @@ import svp7 from "@/public/svp7.jpg";
 
 export default function VizdevGallery() {
   const ponya = [
-    { src: KalmanMichelleFinalEstablishingShot },
-    { src: KalmanMichelleFinalStoryMoment },
-    { src: KalmanMichelleFinalCharacterKyi },
-    { src: KalmanMichelleFinalProps },
-    { src: KalmanMichelleFinalVehicle },
+    { src: KalmanMichelleFinalEstablishingShot, title: "Establishing Shot" },
+    { src: KalmanMichelleFinalStoryMoment, title: "Story Moment" },
+    { src: KalmanMichelleFinalCharacterKyi, title: "Character: Kyi" },
+    { src: KalmanMichelleFinalProps, title: "Props" },
+    { src: KalmanMichelleFinalVehicle, title: "Vehicle" },
   ];
   const treehouseTest = [
-    { src: kalmanMichelletest2 },
-    { src: kalmanMichelletestideations },
-    { src: kalmanMichelletreasurebox2 },
+    { src: kalmanMichelletest2, title: "Treehouse Test" },
+    { src: kalmanMichelletestideations, title: "Ideations" },
+    { src: kalmanMichelletreasurebox2, title: "Treasure Box" },
   ];
-  const secondVariety = [{ src: svp2 }, { src: svp6 }, { src: svp7 }];
+  const secondVariety = [
+    { src: svp2, title: "svp2" },
+    { src: svp6, title: "svp6" },
+    { src: svp7, title: "svp7" },
+  ];
   const theBookThief = [
-    { src: SprKalmanMichelle06PropDesign },
-    { src: SprKalmanMichelle07PropStoryMoment },
-    { src: SprKalmanMichelle10Environment2 },
+    { src: SprKalmanMichelle06PropDesign, title: "Prop Design" },
+    { src: SprKalmanMichelle07PropStoryMoment, title: "Prop Story Moment" },
+    { src: SprKalmanMichelle10Environment2, title: "Environment 2" },
   ];
   return (
     <div>

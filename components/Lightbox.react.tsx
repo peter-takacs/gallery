@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "@/components/lightbox.module.css";
+import LightboxContext from "@/components/LightboxContext.react";
 
 type Props = {
   src: string;

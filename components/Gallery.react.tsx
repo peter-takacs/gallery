@@ -3,6 +3,7 @@ import GalleryImage from "@/components/GalleryImage.react";
 
 export type Image = {
   src: string;
+  title?: string;
 };
 
 type Props = {
@@ -15,8 +16,8 @@ export default function Gallery({ title, images }: Props) {
     <div className={styles.gallery}>
       <h2>{title}</h2>
       <div className={styles.imageGrid}>
-        {images.map(({ src }) => (
-          <GalleryImage src={src} key={src} />
+        {images.map(({ src, title }) => (
+          <GalleryImage src={src} key={src} title={title} />
         ))}
       </div>
     </div>

@@ -94,6 +94,10 @@ li {
   margin: 12px;
 }
 
+li:first-of-type {
+  margin-left: 0;
+}
+
 li a:hover {
   text-decoration: underline;
 }

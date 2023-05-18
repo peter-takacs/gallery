@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const routes = [
-    { href: "vizdev", name: "Vizdev" },
+    { href: "vizdev", name: "Visual development" },
     //TODO { href: "illustration", name: "Illustration" },
     { href: "about", name: "About" },
   ];
@@ -23,8 +23,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <section className="header">
-          <h1>Michelle Kalman</h1>
           <ul>
+            <li className="large-heading">
+              <h1>Michelle Kalman</h1>
+            </li>
+            <li className="small-heading">
+              <h1>MK</h1>
+            </li>
             {routes.map(({ href, name }) => (
               <li key={href}>
                 <Link href={href}>{name}</Link>

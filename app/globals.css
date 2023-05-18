@@ -49,8 +49,8 @@ a {
 }
 
 h1 {
-  font-size: xx-large;
-  font-weight: 300;
+  font-size: 2em;
+  font-weight: 200;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -60,12 +60,13 @@ h1 {
 }
 
 section.header {
-  align-items: baseline;
+  align-items: last baseline;
   display: flex;
   flex-direction: row;
 }
 
 section.header ul {
+  align-items: last baseline;
   display: flex;
   flex-direction: row;
   list-style-type: none;
@@ -73,10 +74,26 @@ section.header ul {
   font-weight: 600;
 }
 
+section.header li {
+  display: inline-block;
+}
+
+@media (max-width: 450px) {
+  section.header li.large-heading {
+    display: none;
+  }
+}
+
+@media (min-width: 451px) {
+  section.header li.small-heading {
+    display: none;
+  }
+}
+
 li {
   margin: 12px;
 }
 
-li:hover {
+li a:hover {
   text-decoration: underline;
 }

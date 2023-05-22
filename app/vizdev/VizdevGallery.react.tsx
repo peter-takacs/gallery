@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Gallery, { Image as GalleryImage } from "@/components/Gallery.react";
 import LightboxContextProvider from "@/components/LightboxContextProvider.react";
 
@@ -7,12 +6,8 @@ import SprKalmanMichelle07PropStoryMoment from "@/public/2019_Spr_Kalman_Michell
 import SprKalmanMichelle10Environment2 from "@/public/2019_Spr_Kalman_Michelle_10_Environment2.jpg";
 import KalmanMichelleFinalCharacterKyi from "@/public/Kalman_Michelle_Final_CharacterKyi.jpg";
 import KalmanMichelleFinalEstablishingShot from "@/public/Kalman_Michelle_Final_EstablishingShot.jpg";
-import KalmanMichelleFinalProps from "@/public/Kalman_Michelle_Final_Props.jpg";
 import KalmanMichelleFinalStoryMoment from "@/public/Kalman_Michelle_Final_StoryMoment.jpg";
 import KalmanMichelleFinalVehicle from "@/public/Kalman_Michelle_Final_Vehicle.jpg";
-import cat from "@/public/cat.jpg";
-import cat2 from "@/public/cat2.jpg";
-import cat3 from "@/public/cat3.jpg";
 import kalmanMichelletest2 from "@/public/kalman_Michelle_test2.jpg";
 import kalmanMichelletestideations from "@/public/kalman_Michelle_testideations.jpg";
 import kalmanMichelletreasurebox2 from "@/public/kalman_Michelle_treasurebox2.jpg";
@@ -25,13 +20,12 @@ export default function VizdevGallery() {
     {
       title: "Ponya",
       images: [
+        { src: KalmanMichelleFinalCharacterKyi, title: "Character: Kyi" },
         {
           src: KalmanMichelleFinalEstablishingShot,
           title: "Establishing Shot",
         },
         { src: KalmanMichelleFinalStoryMoment, title: "Story Moment" },
-        { src: KalmanMichelleFinalCharacterKyi, title: "Character: Kyi" },
-        { src: KalmanMichelleFinalProps, title: "Props" },
         { src: KalmanMichelleFinalVehicle, title: "Vehicle" },
       ],
     },

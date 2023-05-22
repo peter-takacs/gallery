@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Gallery from "@/components/Gallery.react";
+import LightboxContextProvider from "@/components/LightboxContextProvider.react";
 
 import SprKalmanMichelle06PropDesign from "@/public/2019_Spr_Kalman_Michelle_06_PropDesign.jpg";
 import SprKalmanMichelle07PropStoryMoment from "@/public/2019_Spr_Kalman_Michelle_07_PropStoryMoment.jpg";
@@ -20,34 +21,56 @@ import svp6 from "@/public/svp6.jpg";
 import svp7 from "@/public/svp7.jpg";
 
 export default function VizdevGallery() {
-  const ponya = [
-    { src: KalmanMichelleFinalEstablishingShot, title: "Establishing Shot" },
-    { src: KalmanMichelleFinalStoryMoment, title: "Story Moment" },
-    { src: KalmanMichelleFinalCharacterKyi, title: "Character: Kyi" },
-    { src: KalmanMichelleFinalProps, title: "Props" },
-    { src: KalmanMichelleFinalVehicle, title: "Vehicle" },
+  const sections = [
+    {
+      title: "Ponya",
+      images: [
+        {
+          src: KalmanMichelleFinalEstablishingShot,
+          title: "Establishing Shot",
+        },
+        { src: KalmanMichelleFinalStoryMoment, title: "Story Moment" },
+        { src: KalmanMichelleFinalCharacterKyi, title: "Character: Kyi" },
+        { src: KalmanMichelleFinalProps, title: "Props" },
+        { src: KalmanMichelleFinalVehicle, title: "Vehicle" },
+      ],
+    },
+    {
+      title: "Treehouse Test",
+      images: [
+        { src: kalmanMichelletest2, title: "Treehouse Test" },
+        { src: kalmanMichelletestideations, title: "Ideations" },
+        { src: kalmanMichelletreasurebox2, title: "Treasure Box" },
+      ],
+    },
+    {
+      title: "Second Variety",
+      images: [
+        { src: svp2, title: "svp2" },
+        { src: svp6, title: "svp6" },
+        { src: svp7, title: "svp7" },
+      ],
+    },
+    {
+      title: "The Book Thief",
+      images: [
+        { src: SprKalmanMichelle06PropDesign, title: "Prop Design" },
+        { src: SprKalmanMichelle07PropStoryMoment, title: "Prop Story Moment" },
+        { src: SprKalmanMichelle10Environment2, title: "Environment 2" },
+      ],
+    },
   ];
-  const treehouseTest = [
-    { src: kalmanMichelletest2, title: "Treehouse Test" },
-    { src: kalmanMichelletestideations, title: "Ideations" },
-    { src: kalmanMichelletreasurebox2, title: "Treasure Box" },
-  ];
-  const secondVariety = [
-    { src: svp2, title: "svp2" },
-    { src: svp6, title: "svp6" },
-    { src: svp7, title: "svp7" },
-  ];
-  const theBookThief = [
-    { src: SprKalmanMichelle06PropDesign, title: "Prop Design" },
-    { src: SprKalmanMichelle07PropStoryMoment, title: "Prop Story Moment" },
-    { src: SprKalmanMichelle10Environment2, title: "Environment 2" },
-  ];
+  const images = [];
+  for (const section of sections) {
+    images.push(...section.images);
+  }
   return (
     <div>
-      <Gallery title="Ponya" images={ponya} />
-      <Gallery title="Treehouse Test" images={treehouseTest} />
-      <Gallery title="Second Variety" images={secondVariety} />
-      <Gallery title="The Book Thief" images={theBookThief} />
+      <LightboxContextProvider images={images}>
+        {sections.map(({ title, images }) => (
+          <Gallery key={title} title={title} images={images} />
+        ))}
+      </LightboxContextProvider>
     </div>
   );
 }

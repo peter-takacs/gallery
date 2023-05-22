@@ -17,7 +17,7 @@ export default function Gallery({ title, images }: Props) {
       <h2>{title}</h2>
       <div className={styles.imageGrid}>
         {images.map(({ src, title }) => (
-          <GalleryImage src={src} key={src} title={title} />
+          <GalleryImage src={src} key={title} title={title} />
         ))}
       </div>
     </div>

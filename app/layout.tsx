@@ -1,7 +1,6 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Link from "next/link";
-import LightboxContextProvider from "@/components/LightboxContextProvider.react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,9 +36,7 @@ export default function RootLayout({
             ))}
           </ul>
         </section>
-        <section className="content">
-          <LightboxContextProvider>{children}</LightboxContextProvider>
-        </section>
+        <section className="content">{children}</section>
       </body>
     </html>
   );

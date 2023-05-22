@@ -13,16 +13,12 @@ type Props = {
 
 export default function GalleryImage({ src, title }: Props) {
   const { show, hide } = useContext(LightboxContext);
-  useEffect(() => {
-    window.addEventListener("popstate", hide);
-    return () => window.removeEventListener("popstate", hide);
-  }, [hide]);
   return (
     <div
       className={styles.image}
       onClick={() => {
         history.pushState(title, "");
-        show(<Lightbox src={src} />);
+        show(<Lightbox image={{ src, title }} />);
       }}
     >
       <Image

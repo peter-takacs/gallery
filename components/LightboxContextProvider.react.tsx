@@ -2,16 +2,18 @@
 
 import LightboxContext from "@/components/LightboxContext.react";
 import { useEffect, useState, useMemo, useCallback } from "react";
+import { Image } from "@/components/Gallery.react";
 
 type Props = {
   children: React.Node;
+  images: Image[];
 };
 
-export default function LightboxContextProvider({ children }: Props) {
+export default function LightboxContextProvider({ children, images }: Props) {
   const [content, setContent] = useState(null);
   const show = useCallback((component) => setContent(component), []);
   const hide = useCallback(() => setContent(null), []);
-  const value = useMemo(() => ({ show, hide }), [show, hide]);
+  const value = useMemo(() => ({ show, hide, images }), [show, hide, images]);
 
   useEffect(() => {
     const listener = (e) => {

@@ -14,12 +14,23 @@ import KalmanMichelleFinalVehicle from "@/public/Kalman_Michelle_Final_Vehicle.j
 import kalmanMichelletest2 from "@/public/kalman_Michelle_test2.jpg";
 import kalmanMichelletestideations from "@/public/kalman_Michelle_testideations.jpg";
 import kalmanMichelletreasurebox2 from "@/public/kalman_Michelle_treasurebox2.jpg";
+import kalmanmichelleHanselGretel from "@/public/kalman_michelle_Hansel_Gretel.jpg";
+import kalmanMichelleWitch from "@/public/kalman_michelle_witch.jpg";
+import kalmanMichelleHouse from "@/public/kalman_michelle_house.jpg";
 import svp2 from "@/public/svp2.jpg";
 import svp6 from "@/public/svp6.jpg";
 import svp7 from "@/public/svp7.jpg";
 
 export default function VizdevGallery() {
   const sections: { title: string; images: GalleryImage[] }[] = [
+    {
+      title: "Hansel and Gretel",
+      images: [
+        { title: "Hansel and Gretel", src: kalmanmichelleHanselGretel },
+        { src: kalmanMichelleWitch, title: "Witch" },
+        { src: kalmanMichelleHouse, title: "House" },
+      ],
+    },
     {
       title: "Ponya",
       images: [

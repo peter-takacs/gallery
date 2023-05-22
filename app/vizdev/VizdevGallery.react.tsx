@@ -26,6 +26,11 @@ import KalmanMichelleZarkovIdeations from "@/public/05-Kalman_Michelle_Zarkov_Id
 import KalmanMichelleCharacterFinal from "@/public/06-Kalman_Michelle_Character_Final.jpg";
 import KalmanMichelleEnvironmentProgress from "@/public/06-Kalman_Michelle_Environment_Progress.jpg";
 
+import ZKalMichZBrushhand from "@/public/ZKalMich__ZBrush_hand.jpg";
+import ZKalMichelleWandColor from "@/public/ZKalMichelle_Wand_Color.jpg";
+import ZKalMichelleWandSculpt from "@/public/ZKalMichelle_Wand_Sculpt.jpg";
+import Zkalmichellezbrushglove from "@/public/Zkalmichelle_zbrush_glove.jpg";
+
 export default function VizdevGallery() {
   const sections: { title: string; images: GalleryImage[] }[] = [
     {
@@ -92,6 +97,15 @@ export default function VizdevGallery() {
         { src: SprKalmanMichelle06PropDesign, title: "Prop Design" },
         { src: SprKalmanMichelle07PropStoryMoment, title: "Prop Story Moment" },
         { src: SprKalmanMichelle10Environment2, title: "Environment 2" },
+      ],
+    },
+    {
+      title: "ZBrush",
+      images: [
+        { src: ZKalMichZBrushhand, title: "ZBrush Hand" },
+        { src: ZKalMichelleWandColor, title: "Wand Color" },
+        { src: ZKalMichelleWandSculpt, title: "Wand Sculpt" },
+        { src: Zkalmichellezbrushglove, title: "Mandalorian Glove" },
       ],
     },
   ];

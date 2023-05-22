@@ -1,8 +1,9 @@
+import { StaticImageData } from "next/image";
 import styles from "@/components/gallery.module.css";
 import GalleryImage from "@/components/GalleryImage.react";
 
 export type Image = {
-  src: string;
+  src: StaticImageData;
   title?: string;
 };
 

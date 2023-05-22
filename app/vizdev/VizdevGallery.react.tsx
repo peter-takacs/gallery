@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Gallery from "@/components/Gallery.react";
+import Gallery, { Image as GalleryImage } from "@/components/Gallery.react";
 import LightboxContextProvider from "@/components/LightboxContextProvider.react";
 
 import SprKalmanMichelle06PropDesign from "@/public/2019_Spr_Kalman_Michelle_06_PropDesign.jpg";
@@ -21,7 +21,7 @@ import svp6 from "@/public/svp6.jpg";
 import svp7 from "@/public/svp7.jpg";
 
 export default function VizdevGallery() {
-  const sections = [
+  const sections: { title: string; images: GalleryImage[] }[] = [
     {
       title: "Ponya",
       images: [

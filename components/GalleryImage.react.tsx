@@ -1,5 +1,6 @@
 "use client";
 
+import { StaticImageData } from "next/image";
 import styles from "@/components/gallery.module.css";
 import Image from "next/image";
 import LightboxContext from "@/components/LightboxContext.react";
@@ -7,7 +8,7 @@ import Lightbox from "@/components/Lightbox.react";
 import { useContext, useEffect } from "react";
 
 type Props = {
-  src: string;
+  src: StaticImageData;
   title?: string;
 };
 
@@ -22,7 +23,8 @@ export default function GalleryImage({ src, title }: Props) {
       }}
     >
       <Image
-        key={src}
+        alt={title ?? "Image"}
+        key={title}
         placeholder="blur"
         src={src}
         style={{ objectFit: "contain" }}

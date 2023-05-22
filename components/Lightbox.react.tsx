@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { Image as GalleryImage } from "@/components/GalleryImage.react";
+import { Image as GalleryImage } from "@/components/Gallery.react";
 import styles from "@/components/lightbox.module.css";
 import LightboxContext from "@/components/LightboxContext.react";
 import YARL from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
-import { useEffect, useContext, useMemo } from "react";
+import { useEffect, useContext } from "react";
 
 type Props = {
   image: GalleryImage;
@@ -18,14 +18,14 @@ export default function Lightbox({ image }: Props) {
     return () => window.removeEventListener("popstate", hide);
   }, [hide]);
 
-  const index = images.findIndex(({ src }) => src.src === image.src.src);
+  const index = images.findIndex(({ title }) => title === image.title);
 
   return (
     <div className={styles.lightbox}>
       <YARL
         open={true}
         close={hide}
-        slides={images}
+        slides={images.map((image) => image.src)}
         index={index}
         render={{ slide: NextJsImage }}
       />
@@ -39,7 +39,7 @@ import {
   useLightboxProps,
 } from "yet-another-react-lightbox";
 
-function NextJsImage({ slide, rect }) {
+function NextJsImage({ slide, rect }: any) {
   const { imageFit } = useLightboxProps().carousel;
   const cover = isImageSlide(slide) && isImageFitCover(slide, imageFit);
 
@@ -48,12 +48,6 @@ function NextJsImage({ slide, rect }) {
         Math.min(rect.width, (rect.height / slide.height) * slide.width)
       )
     : rect.width;
-
-  const height = !cover
-    ? Math.round(
-        Math.min(rect.height, (rect.width / slide.width) * slide.height)
-      )
-    : rect.height;
 
   return (
     <div style={{ position: "relative", width: "100%", height: "100%" }}>

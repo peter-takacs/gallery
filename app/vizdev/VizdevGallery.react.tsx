@@ -20,6 +20,11 @@ import kalmanMichelleHouse from "@/public/kalman_michelle_house.jpg";
 import svp2 from "@/public/svp2.jpg";
 import svp6 from "@/public/svp6.jpg";
 import svp7 from "@/public/svp7.jpg";
+import KalmanMichelleGunIdeations from "@/public/02-Kalman_Michelle_Gun_Ideations.jpg";
+import KalmanMichelleEffects from "@/public/03-Kalman_Michelle_Effects.jpg";
+import KalmanMichelleZarkovIdeations from "@/public/05-Kalman_Michelle_Zarkov_Ideations.jpg";
+import KalmanMichelleCharacterFinal from "@/public/06-Kalman_Michelle_Character_Final.jpg";
+import KalmanMichelleEnvironmentProgress from "@/public/06-Kalman_Michelle_Environment_Progress.jpg";
 
 export default function VizdevGallery() {
   const sections: { title: string; images: GalleryImage[] }[] = [
@@ -29,6 +34,19 @@ export default function VizdevGallery() {
         { title: "Hansel and Gretel", src: kalmanmichelleHanselGretel },
         { src: kalmanMichelleWitch, title: "Witch" },
         { src: kalmanMichelleHouse, title: "House" },
+      ],
+    },
+    {
+      title: "Flash Gordon",
+      images: [
+        { src: KalmanMichelleCharacterFinal, title: "Character Final" },
+        { src: KalmanMichelleZarkovIdeations, title: "Zarkov Ideations" },
+        { src: KalmanMichelleGunIdeations, title: "Gun Ideations" },
+        { src: KalmanMichelleEffects, title: "Effects" },
+        {
+          src: KalmanMichelleEnvironmentProgress,
+          title: "Environment Progress",
+        },
       ],
     },
     {

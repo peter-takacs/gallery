@@ -5,5 +5,9 @@ export default function staticLoader({
   width: number;
   quality?: number;
 }) {
+  if (width < 500) {
+    const [filename, extension] = src.split(".");
+    return `${filename}_small.${extension}`;
+  }
   return src;
 }

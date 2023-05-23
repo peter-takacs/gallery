@@ -6,6 +6,7 @@ import Image from "next/image";
 import LightboxContext from "@/components/LightboxContext.react";
 import Lightbox from "@/components/Lightbox.react";
 import { useContext, useEffect } from "react";
+import staticLoader from "@/app/image";
 
 type Props = {
   src: StaticImageData;
@@ -27,7 +28,9 @@ export default function GalleryImage({ src, title }: Props) {
         key={title}
         placeholder="blur"
         src={src}
-        style={{ objectFit: "contain" }}
+        height={300}
+        width={460}
+        loader={staticLoader}
       />
     </div>
   );

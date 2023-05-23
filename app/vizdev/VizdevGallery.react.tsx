@@ -114,12 +114,10 @@ export default function VizdevGallery() {
     images.push(...section.images);
   }
   return (
-    <div>
-      <LightboxContextProvider images={images}>
-        {sections.map(({ title, images }) => (
-          <Gallery key={title} title={title} images={images} />
-        ))}
-      </LightboxContextProvider>
-    </div>
+    <LightboxContextProvider images={images}>
+      {sections.map(({ title, images }) => (
+        <Gallery key={title} title={title} images={images} />
+      ))}
+    </LightboxContextProvider>
   );
 }

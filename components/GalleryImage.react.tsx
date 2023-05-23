@@ -7,6 +7,7 @@ import LightboxContext from "@/components/LightboxContext.react";
 import Lightbox from "@/components/Lightbox.react";
 import { useContext, useEffect } from "react";
 import staticLoader from "@/app/image";
+import ExportedImage from "next-image-export-optimizer";
 
 type Props = {
   src: StaticImageData;
@@ -23,14 +24,11 @@ export default function GalleryImage({ src, title }: Props) {
         show(<Lightbox image={{ src, title }} />);
       }}
     >
-      <Image
+      <ExportedImage
         alt={title ?? "Image"}
         key={title}
-        placeholder="blur"
+        layout="responsive"
         src={src}
-        height={300}
-        width={460}
-        loader={staticLoader}
       />
     </div>
   );

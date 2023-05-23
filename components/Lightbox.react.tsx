@@ -38,6 +38,7 @@ import {
   isImageSlide,
   useLightboxProps,
 } from "yet-another-react-lightbox";
+import ExportedImage from "next-image-export-optimizer";
 
 function NextJsImage({ slide, rect }: any) {
   const { imageFit } = useLightboxProps().carousel;
@@ -50,16 +51,14 @@ function NextJsImage({ slide, rect }: any) {
     : rect.width;
 
   return (
-    <div style={{ position: "relative", width: "100%", height: "100%" }}>
-      <Image
-        fill
+    <div style={{ position: "relative", width: "100%" }}>
+      <ExportedImage
         alt=""
         src={slide.src}
-        loading="eager"
-        placeholder="blur"
         draggable={false}
         style={{ objectFit: cover ? "cover" : "contain" }}
         sizes={`${Math.ceil((width / window.innerWidth) * 100)}vw`}
+        layout="responsive"
       />
     </div>
   );

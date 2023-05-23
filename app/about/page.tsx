@@ -1,12 +1,12 @@
 import cat from "@/../public/cat.jpg";
-import Image from "next/image";
 import styles from "@/app/about/about.module.css";
+import ExportedImage from "next-image-export-optimizer";
 
 export default function About() {
   return (
     <div className={styles.about}>
       <div>
-        <Image
+        <ExportedImage
           alt="The most beautiful cat in the world"
           src={cat}
           fill={true}

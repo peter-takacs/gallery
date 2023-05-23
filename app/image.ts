@@ -1,5 +1,6 @@
 export default function staticLoader({
   src,
+  width,
 }: {
   src: string;
   width: number;

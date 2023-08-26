@@ -47,7 +47,6 @@ export default function VizdevGallery() {
         { src: KalmanMichelleCharacterFinal, title: "Character Final" },
         { src: KalmanMichelleZarkovIdeations, title: "Zarkov Ideations" },
         { src: KalmanMichelleGunIdeations, title: "Gun Ideations" },
-        { src: KalmanMichelleEffects, title: "Effects" },
         {
           src: KalmanMichelleEnvironmentProgress,
           title: "Environment Progress",
@@ -58,7 +57,6 @@ export default function VizdevGallery() {
       title: "Ponya",
       images: [
         { src: KalmanMichelleFinalCharacterKyi, title: "Character: Kyi" },
-        { src: KalmanMichelleFinalCharacterMaung, title: "Character: Maung" },
         {
           src: KalmanMichelleFinalCharacterTurnaround,
           title: "Character turnaround",
@@ -67,11 +65,6 @@ export default function VizdevGallery() {
           src: KalmanMichelleFinalVehicleBreakaway,
           title: "Vehicle Breakaway",
         },
-        {
-          src: KalmanMichelleFinalEstablishingShot,
-          title: "Establishing Shot",
-        },
-        { src: KalmanMichelleFinalStoryMoment, title: "Story Moment" },
         { src: KalmanMichelleFinalVehicle, title: "Vehicle" },
       ],
     },

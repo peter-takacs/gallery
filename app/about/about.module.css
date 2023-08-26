@@ -7,7 +7,7 @@
   min-height: 300px;
 }
 
-.about div {
+.about > div {
   min-height: 20vh;
   position: relative;
 }
@@ -21,4 +21,14 @@
   margin-top: 2em;
   margin-bottom: 1em;
   font-weight: 600;
+}
+
+.about .emailBlock {
+  display: flex;
+  margin-top: 1em;
+  align-items: center;
+}
+
+.about .emailBlock .email {
+  text-decoration: underline;
 }

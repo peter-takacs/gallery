@@ -29,6 +29,10 @@
   align-items: center;
 }
 
-.about .emailBlock .email {
+.about .email {
   text-decoration: underline;
+}
+
+.about p {
+  margin-bottom: 1em;
 }
